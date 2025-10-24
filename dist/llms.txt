@@ -1,0 +1,8 @@
+## Pages
+- [- Adopción Responsable | HuellaComún](/dogprofile): No description available
+- [Buscar Perros - HuellaComún](/search): Encuentra tu compañero perfecto usando filtros de compatibilidad. Busca por estilo de vida, no por apariencia.
+- [Educación y Recursos - HuellaComún](/education): Aprende todo sobre adopción responsable, cuidados, esterilización y bienestar animal. Recursos educativos para futuros adoptantes.
+- [HuellaComún - Adopción Responsable de Perros](/home): Encuentra tu compañero perfecto. Plataforma de adopción responsable que conecta personas con refugios basándose en compatibilidad de vida, no en apariencia.
+- [Iniciar Sesión - HuellaComún](/login): Inicia sesión en HuellaComún para gestionar tus favoritos y solicitudes de adopción.
+- [Panel de Refugio - HuellaComún](/shelterdashboard): Gestiona tus perros en adopción, visualiza estadísticas y administra solicitudes desde tu panel de refugio.
+- [Registro - HuellaComún](/register): Únete a HuellaComún como adoptante o refugio. Comienza tu viaje hacia la adopción responsable.
