@@ -1,0 +1,53 @@
+
+{
+    "header": {
+        "home": "Inicio",
+        "search": "Buscar",
+        "education": "Educación",
+        "donate": "Donar",
+        "shelterPanel": "Panel Refugio",
+        "adminPanel": "Panel Admin",
+        "login": "Iniciar Sesión",
+        "register": "Registrarse",
+        "logout": "Cerrar Sesión",
+        "greeting": "¡Hola, {{name}}!",
+        "notifications": "Notificaciones"
+    },
+    "footer": {
+        "tagline": "Conectando corazones con patitas. Adopción responsable para un mundo mejor.",
+        "navigation": "Navegación",
+        "home": "Inicio",
+        "search": "Buscar Animales",
+        "education": "Educación",
+        "donate": "Donar",
+        "legal": "Legal",
+        "terms": "Términos de Servicio",
+        "privacy": "Política de Privacidad",
+        "cookies": "Política de Cookies",
+        "reportChannel": "Canal de denuncias",
+        "contact": "Contacto"
+    },
+    "shelterPanel": {
+        "title": "Panel de {{name}}",
+        "freePromotion": "¡Tienes {{count}} promoción gratuita disponible!",
+        "activeAnimals": "Animales activos",
+        "promotions": "Promociones",
+        "messages": "Mensajes",
+        "requests": "Solicitudes",
+        "myAnimals": "Mis Animales",
+        "chats": "Chats",
+        "stories": "Historias",
+        "settings": "Ajustes",
+        "bulkUpload": "Subida Masiva",
+        "add": "Añadir",
+        "bulkUploadDialog": {
+            "title": "Subida Masiva de Animales",
+            "description": "Ahorra tiempo subiendo los datos de múltiples animales a la vez usando un archivo CSV.",
+            "instructions": "Prepara un archivo CSV con las siguientes columnas: `nombre`, `edad`, `tamaño`, `energia`, `descripcion`, `estado`.",
+            "downloadTemplate": "Descargar plantilla CSV",
+            "dropzone": "Arrastra tu archivo CSV aquí o haz clic para seleccionarlo.",
+            "cancel": "Cancelar",
+            "uploadAndProcess": "Subir y Procesar"
+        }
+    }
+}

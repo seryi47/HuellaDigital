@@ -4,37 +4,43 @@ import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import HomePage from '@/pages/HomePage';
 import SearchPage from '@/pages/SearchPage';
-import DogProfilePage from '@/pages/DogProfilePage';
 import EducationPage from '@/pages/EducationPage';
-import ShelterDashboard from '@/pages/ShelterDashboard';
-import LoginPage from '@/pages/LoginPage';
+import ShelterPanelPage from '@/pages/ShelterPanelPage';
 import RegisterPage from '@/pages/RegisterPage';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import LoginPage from '@/pages/LoginPage';
+import DonationPage from '@/pages/DonationPage';
+import ShelterProfilePage from '@/pages/ShelterProfilePage';
+import DogProfilePage from '@/pages/DogProfilePage';
+import AdminPanelPage from '@/pages/AdminPanelPage';
+import StoryProfilePage from '@/pages/StoryProfilePage';
+import ChatPage from '@/pages/ChatPage';
+import { Toaster } from '@/components/ui/toaster';
+import { AuthProvider } from '@/contexts/SupabaseAuthContext';
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <Helmet>
-        <title>HuellaComún - Adopción Responsable de Perros</title>
-        <meta name="description" content="Plataforma de adopción responsable que conecta personas con refugios y protectoras. Encuentra tu compañero perfecto basándote en compatibilidad, no en apariencia." />
+        <title>Huella Digital - Adopta, Dona y Salva una Vida</title>
+        <meta name="description" content="Huella Digital es la plataforma líder en adopción de animales. Conecta con refugios, encuentra a tu compañero ideal y apoya a los animales necesitados. Adopta, dona, salva una vida." />
+        <meta name="keywords" content="adopción de animales, adoptar perro, adoptar gato, refugio de animales, donar a protectoras, salvar animales, Huella Digital" />
       </Helmet>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/buscar" element={<SearchPage />} />
-            <Route path="/perro/:id" element={<DogProfilePage />} />
-            <Route path="/educacion" element={<EducationPage />} />
-            <Route path="/panel-refugio" element={<ShelterDashboard />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/registro" element={<RegisterPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/buscar" element={<SearchPage />} />
+        <Route path="/educacion" element={<EducationPage />} />
+        <Route path="/donar" element={<DonationPage />} />
+        <Route path="/refugio/:id" element={<ShelterProfilePage />} />
+        <Route path="/animal/:id" element={<DogProfilePage />} />
+        <Route path="/historia/:id" element={<StoryProfilePage />} />
+        <Route path="/panel-refugio" element={<ShelterPanelPage />} />
+        <Route path="/panel-admin" element={<AdminPanelPage />} />
+        <Route path="/chat/:animalId" element={<ChatPage />} />
+        <Route path="/registrarse" element={<RegisterPage />} />
+        <Route path="/iniciar-sesion" element={<LoginPage />} />
+      </Routes>
+      <Toaster />
+    </AuthProvider>
   );
 }
 
