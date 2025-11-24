@@ -82,16 +82,33 @@ export const AuthProvider = ({ children }) => {
     return { error };
   }, [toast]);
 
+  // const signInWithGoogle = useCallback(async () => {
+  //   const { error } = await supabase.auth.signInWithOAuth({ provider: 'google' });
+  //   if (error) {
+  //     toast({
+  //       variant: "destructive",
+  //       title: "Fallo con Google",
+  //       description: error.message || "No se pudo iniciar sesión con Google.",
+  //     });
+  //   }
+  // }, [toast]);
+
   const signInWithGoogle = useCallback(async () => {
-    const { error } = await supabase.auth.signInWithOAuth({ provider: 'google' });
-    if (error) {
-      toast({
-        variant: "destructive",
-        title: "Fallo con Google",
-        description: error.message || "No se pudo iniciar sesión con Google.",
-      });
-    }
-  }, [toast]);
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: 'google',
+    options: {
+      redirectTo: window.location.origin,
+    },
+  });
+  if (error) {
+    toast({
+      variant: "destructive",
+      title: "Fallo con Google",
+      description: error.message || "No se pudo iniciar sesión con Google.",
+    });
+  }
+}, [toast]);
+
 
   const signOut = useCallback(async () => {
     const { error } = await supabase.auth.signOut();
